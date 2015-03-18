@@ -1,0 +1,62 @@
+---
+title: "Summary Data"
+output:
+  html_document:
+  toc: true
+  theme: united
+  hightlight: zenburn
+---
+
+```{r echo=FALSE, message=FALSE}
+
+library(knitr)
+library(quantmod)
+library(xtable)
+library(PerformanceAnalytics)
+
+opts_chunk$set(comment = NA, echo=FALSE, message=FALSE, warnings=FALSE)
+options("getSymbols.warning4.0"=FALSE)
+
+```
+
+Stocks
+--------------------------------------------------
+```{r}
+Symbols <- c("AAPL", "CSCO")
+```
+
+Stocks Holdings:
+
+```{r results='asis'}
+
+Current <- Symbols[1]
+
+invisible(s <- getSymbols(Current, auto.assign=FALSE))
+cat("##", Current, "\n")
+
+candleChart(s, subset='last 24 months', name=Current, bar.type="ohlc", theme=chartTheme('black'))
+```
+
+
+```{r results='asis'}
+
+Current <- Symbols[2]
+
+invisible(s <- getSymbols(Current, auto.assign=FALSE))
+cat("##", Current, "\n")
+
+candleChart(s, subset='last 24 months', name=Current, bar.type="ohlc", theme=chartTheme('black'))
+```
+
+Bonds
+--------------------------------------------------
+
+Mutual Funds
+--------------------------------------------------
+
+International Stocks
+--------------------------------------------------
+
+Commodities
+--------------------------------------------------
+

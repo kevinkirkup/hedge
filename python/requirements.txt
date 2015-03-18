@@ -1,0 +1,9 @@
+numexpr>=2.0
+cython>=0.13
+tables
+numpy
+h5py
+tornado
+pyzmq
+pandas
+ipython
