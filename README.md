@@ -20,6 +20,9 @@ Install the packages that are require
 
     > install.packages("quantmod")
 
+A **setup.R** script has been included in the RScripts directory for installing all dependencies required to run the avialable scripts.
+In the future, the plan is to move to using [packrat](http://rstudio.github.io/packrat/).
+
 ## Install Python
 
 Install python via Homebrew with
